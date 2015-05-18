@@ -12,7 +12,8 @@ var port = process.argv[3];
 
 var server = net.createServer(function(socket) {
   var ws = new WebSocket(process.argv[2], {
-    rejectUnauthorized: false
+    rejectUnauthorized: false,
+    protocol: "binary"
   });
 
   socket.on('error', function(err) {
