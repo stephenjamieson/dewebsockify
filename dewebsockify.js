@@ -23,7 +23,7 @@ var server = net.createServer(function(socket) {
 
   ws.on('error', function(err) {
     console.log("Connection from", socket.address().address ,"to end-point...", err.toString());
-    socket.destroy);
+    socket.destroy();
   });
 
   ws.on('open', function() {
